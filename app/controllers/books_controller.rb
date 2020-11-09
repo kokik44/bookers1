@@ -40,8 +40,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book)
       flash[:notice] = "Book was successfully updated."
     else
-      redirect_to edit_book_path
-      flash[:notice] = "error occured"
+      render :edit
     end
   end
 
@@ -55,9 +54,6 @@ class BooksController < ApplicationController
       else
        flash[:notice] = "error occured"
       end
-  end
-  def top
-
   end
 
   private
